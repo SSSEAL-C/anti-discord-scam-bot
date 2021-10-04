@@ -1,0 +1,19 @@
+{
+  "name": "anti-discord-scam-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SSSEAL-C/anti-discord-scam-bot.git"
+  },
+  "author": "SSSEAL-C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SSSEAL-C/anti-discord-scam-bot/issues"
+  },
+  "homepage": "https://github.com/SSSEAL-C/anti-discord-scam-bot#readme",
+  "description": ""
+}
