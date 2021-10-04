@@ -14,6 +14,8 @@ axios.get('https://raw.githubusercontent.com/BuildBot42/discord-scam-links/main/
         return console.error('ERR:', err)
     })
 client.on("ready", () => {
+    client.user.setStatus("online")
+    client.user.setActivity(`ds!info | Protecting ${client.guilds.cache.size} users!`)
     console.log('Bot Ready!')
     console.log(links.length+" links loaded!")
 })
@@ -30,7 +32,7 @@ client.on('messageCreate', message => {
             .setColor('RANDOM')
             .setTitle(":no_entry_sign: Anti Discord Scam Links")
             .setThumbnail('https://i.imgur.com/kHoTKoT.png')
-            .addField(':busts_in_silhouette: Creators', "realsovietseal", true)
+            .addField(':busts_in_silhouette: Creators', "realsovietseal#0001", true)
             .addField(':keyboard: Github', "https://github.com/SSSEAL-C/anti-discord-scam-bot", true)
             .addField('Scam Link Source', "https://raw.githubusercontent.com/BuildBot42/discord-scam-links/main/list.txt", true)
             .setFooter('Made by SSSEAL-C')
