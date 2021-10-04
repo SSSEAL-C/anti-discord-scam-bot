@@ -1,5 +1,5 @@
 # anti-discord-scam-bot
-A discord.js bot to delete Discord scam links! The list is accessed from [BuildBot's Scam Links](https://raw.githubusercontent.com/BuildBot42/discord-scam-links/main/list.txt) which is frequently updated by him with occasional credit from myself. (if you come across any new links DM them to BuildBot).
+A discord.js bot to delete Discord scam links! The list is accessed from [BuildBot's](https://www.github.com/BuildBot42) comprehensive [Scam Links List](https://raw.githubusercontent.com/BuildBot42/discord-scam-links/main/list.txt) which is frequently updated by him with occasional credit from myself. (if you come across any new links DM them to BuildBot).
 
 ## Setup
 
