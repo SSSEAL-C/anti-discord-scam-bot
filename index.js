@@ -36,7 +36,7 @@ client.on('messageCreate', message => {
             .addField(':keyboard: Github', "https://github.com/SSSEAL-C/anti-discord-scam-bot", true)
             .addField('Scam Link Source', "https://raw.githubusercontent.com/BuildBot42/discord-scam-links/main/list.txt", true)
             .setFooter('Made by SSSEAL-C')
-            .setURL('https://discord.com/api/oauth2/authorize?client_id=894620220684140585&permissions=2147576832&scope=bot')
+            .setURL('https://github.com/SSSEAL-C/anti-discord-scam-bot')
             .setTimestamp()
         
         message.channel.send({ embeds: [botinfo] });
