@@ -3,7 +3,13 @@ const { default: axios } = require("axios")
 const Discord = require("discord.js")
 const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] })
 const { MessageEmbed } = require('discord.js');
+const fs = require('fs');
 const prefix = "ds!"
+const token = "ODk0NjIwMjIwNjg0MTQwNTg1.YVsqAQ.8FTGeHTeqe0TczN1t6Zg5P4bKJo"
+let custom_links = fs.readFileSync('./custom_links.txt', { encoding: 'utf8', flag: 'r' }).split('\n')
+
+
+
 links = ""
 axios.get('https://raw.githubusercontent.com/BuildBot42/discord-scam-links/main/list.txt')
     .then((res) => {
@@ -18,6 +24,7 @@ client.on("ready", () => {
     client.user.setActivity(`ds!info | Protecting ${client.guilds.cache.size} users!`)
     console.log('Bot Ready!')
     console.log(links.length + " links loaded!")
+    console.log(custom_links.length + " custom links loaded!")
 })
 client.on('messageCreate', message => {
     const args = message.content
@@ -56,8 +63,21 @@ client.on('messageCreate', message => {
             message.channel.send({ embeds: [botinfo] });
         }
     })
+    custom_links.forEach(function(link) {
+        if (message.content.includes(link)) {
+            message.delete()
+            const botinfo = new MessageEmbed()
+                .setColor('RANDOM')
+                .setTitle(":no_entry_sign: Anti Discord Scam Links")
+                .setThumbnail('https://i.imgur.com/kHoTKoT.png')
+                .setDescription('The user <@' + message.author.id + '> (aka. ' + message.author.username + "#" + message.author.discriminator + ") [" + message.author.id + "] sent a **Discord Scam Link** and has either been hacked or is a malicious user!")
+                .setFooter('Made by SSSEAL-C')
+                .setTimestamp()
 
+            message.channel.send({ embeds: [botinfo] });
+        }
+    })
 })
 
 
-client.login("discord token here")
+client.login(token)
