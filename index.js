@@ -5,7 +5,7 @@ const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] })
 const { MessageEmbed } = require('discord.js');
 const fs = require('fs');
 const prefix = "ds!"
-const token = "ODk0NjIwMjIwNjg0MTQwNTg1.YVsqAQ.8FTGeHTeqe0TczN1t6Zg5P4bKJo"
+const token = "token here"
 let custom_links = fs.readFileSync('./custom_links.txt', { encoding: 'utf8', flag: 'r' }).split('\n')
 
 
