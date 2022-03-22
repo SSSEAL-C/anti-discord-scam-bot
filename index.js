@@ -27,6 +27,9 @@ client.on("ready", () => {
     console.log(custom_links.length + " custom links loaded!")
 })
 client.on('messageCreate', message => {
+    if (message.content.substring(0,prefix.length) !== prefix) {
+        return
+    }
     const args = message.content
         .slice(prefix.length)
         .trim()
